@@ -6,7 +6,7 @@ This is a hobby project that uses Constraint Programming and some recursion to g
 
 First, clone this repo or download a zip file and extract it, then open the project with your favorite IDE.
 This project only uses three standalone packages, and their own prerequisites. These are `numpy`, `matplotlib`, and Google's `ortools`. I suspect Numpy is in fact a prerequisite of OR-Tools, but I'm mentioning it separately just in case.
-Install them from the terminal with the command `pip install requirements.txt`, or navigate to them by hand if your IDE has integrated package management.
+Install them from the terminal with the command `pip install -r requirements.txt`, or navigate to them by hand if your IDE has integrated package management.
 
 Once these packages are working, an example script utilizing the main functionalities can be found in `main.py`. Set the `MODE` parameter to 0,1 or 2, and run the script.
 Take note that the script may take some minutes to terminate, if mode 0 or 1 are chosen for the demo.
@@ -61,7 +61,7 @@ Then the mapping to 2d is the obvious
 Let us define a _tile_ as a tuple of an integer `n`, the number of cells in the tile, and a set of edges `E` of neighboring cells indices.
 
     n  =  14 
-    E  =  (0,1), (1,2), (2,3), (3,4), (1,4), (4,5), (1,6), (6,7), (3,8), (8,9), (9,10), (3,11), (11, 12), (12,13)
+    E  =  (0,1), (1,2), (2,3), (1,4), (4,5), (1,6), (6,7), (3,8), (8,9), (9,10), (3,11), (11, 12), (12,13)
 
 Let us use this tile above as the motivating example: a man-shaped tile (man-tile) with torso length of 3 cells, arm length of 2 cells, and leg length of 3 cells. In one specific folding, it looks like the image below.
 Remember that the numbers on this figure are not the `w` coordinate, but the index counting along the cells of this tile. So the head of the man has w-coordinate `w[0]`.
